@@ -1,16 +1,16 @@
 {
     "objs": [
         {
-            "name": "Desert City",
-            "creator": "Luca’s Studios Copyright 2014©",
-            "license": "You are free to use it for your own personal use, not commercial. if you wish to use it for commercial purposes please contact me at lscarci@icloud.com and id be happy to give you the rights and the other builds of the model.",
-            "path": "/obj/desert_city/desert_city.obj"
-        },
-        {
             "name": "Castle",
             "creator": "Herminio Nieves @2012",
             "license": "for comercial and non comercial use. just give the apropiate credits!",
             "path": "/obj/castle/castle/castle.obj"
+        },
+        {
+            "name": "Desert City",
+            "creator": "Luca’s Studios Copyright 2014©",
+            "license": "You are free to use it for your own personal use, not commercial. if you wish to use it for commercial purposes please contact me at lscarci@icloud.com and id be happy to give you the rights and the other builds of the model.",
+            "path": "/obj/desert_city/desert_city.obj"
         }
     ]
 }
