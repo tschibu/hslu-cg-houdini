@@ -1,6 +1,12 @@
 {
     "objs": [
         {
+            "name": "Generative City",
+            "creator": "Schwarzentruber, Nebroj, Ineichen @2018",
+            "license": "for comercial and non comercial use. just give the apropiate credits!",
+            "path": "/obj/generative_city/map.obj"
+        },
+        {
             "name": "Castle",
             "creator": "Herminio Nieves @2012",
             "license": "for comercial and non comercial use. just give the apropiate credits!",
