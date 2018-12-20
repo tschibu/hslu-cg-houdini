@@ -1,8 +1,9 @@
-body {
+html, body {
     position: absolute;
     margin: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 canvas {
@@ -16,10 +17,54 @@ canvas {
     height: 10%;
     width: 100%;
 
-    text-align: center;
-    color: slategray;
+    border-bottom: 1px solid black;
+}
 
-    border-bottom: 1px solid slategrey;
+.toolbar {
+    margin: 0 0;
+    width: 100%;
+    height: 100%;
+
+    list-style-type: none;
+
+    display: inline-flex;
+}
+
+.title {
+    width: 20%;
+
+    text-align: center;
+
+}
+
+.title h4 {
+    margin: 0.5em 0.5em;
+
+    color: black;
+}
+
+.title h5 {
+    margin: 0.5em 0.5em;
+
+    color: slategray;
+}
+
+.objselection {
+    width: 20%;
+}
+
+.objselection h5 {
+    margin: 2em 0em 0.0em 3em;
+
+    color: slategray;
+}
+
+.objselection select {
+    margin: 0.5em 0em 0.5em 3.0em;
+}
+
+.data {
+    width: 20%;
 }
 
 .content {

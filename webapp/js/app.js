@@ -74,6 +74,8 @@ function loadJson(path, callback) {
 
 function createObjSelection(config) {
     console.log(config.objs);
+    let h6 = document.createElement("h5");
+    h6.innerText = "Select *.obj File:";
     let slct = document.createElement("select");
     slct.disabled = false;
     slct.onchange = selectObj;
@@ -84,7 +86,9 @@ function createObjSelection(config) {
         option.text = obj.name;
         slct.options.add(option);
     });
-    document.getElementById("objselection").append(slct);
+    let objslct = document.getElementById("objselection")
+    objslct.append(h6);
+    objslct.append(slct);
     openObj(slct.options[0].value);
     onWindowResize();
     render();
