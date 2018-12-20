@@ -10,10 +10,20 @@ var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4);
 var pointLight = new THREE.PointLight(0xffffff, 0.8);
 var renderer = new THREE.WebGLRenderer();
 
+var size = 1000;
+var divisions = 100;
+var helperGrid = new THREE.GridHelper(size, divisions);
+
 //create scene
 scene.add(ambientLight);
 camera.add(pointLight);
 scene.add(camera);
+camera.position.x = 0;
+camera.position.y = 18;
+camera.position.z = 84;
+
+//add helper grid
+scene.add(helperGrid);
 
 //renderer
 renderer.setPixelRatio(window.devicePixelRatio);
@@ -21,8 +31,9 @@ renderer.setSize(content.innerWidth, content.innerHeight);
 content.appendChild(renderer.domElement);
 
 //event listeners
-document.addEventListener('mousemove', onDocumentMouseMove, false);
+//document.addEventListener('mousemove', onDocumentMouseMove, false);
 window.addEventListener('resize', onWindowResize, false);
+window.addEventListener('keypress', onDocumentKeyPress, false);
 
 
 //Start doing work...
@@ -34,6 +45,18 @@ animate();
 
 //-----------------------------------------------------------------
 // Functions
+
+function render() {
+    //camera.position.x += (mouseX - camera.position.x) * .05;
+    //camera.position.y += (- mouseY - camera.position.y) * .05;
+    //camera.lookAt(scene.position);
+    renderer.render(scene, camera);
+}
+
+function animate() {
+    requestAnimationFrame(animate);
+    render();
+}
 
 function loadJson(path, callback) {
     var url = path;
@@ -63,6 +86,8 @@ function createObjSelection(config) {
     });
     document.getElementById("objselection").append(slct);
     openObj(slct.options[0].value);
+    onWindowResize();
+    render();
 }
 
 function selectObj(event) {
@@ -76,6 +101,7 @@ function openObj(objPath) {
     loader.load(
         objPath,
         function (object) {
+            console.log("Add object to Scene:");
             console.log(object);
             scene.add(object);
         },
@@ -98,19 +124,62 @@ function onWindowResize() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
-function onDocumentMouseMove(event) {
-    mouseX = (event.clientX - windowHalfX) / 2;
-    mouseY = (event.clientY - windowHalfY) / 2;
-}
+function onDocumentKeyPress( event ) {
+    var keyCode = event.which;
+    var positionDelta = 6;
+    var rotationDelta = 0.1;
+    console.log(keyCode);
+    //A
+    if ( keyCode == 97 )
+    {
+        camera.position.x -= positionDelta;
+    }
+    //D
+    else if ( keyCode == 100 )
+    {
 
-function render() {
-    camera.position.x += (mouseX - camera.position.x) * .05;
-    camera.position.y += (- mouseY - camera.position.y) * .05;
-    camera.lookAt(scene.position);
-    renderer.render(scene, camera);
-}
-
-function animate() {
-    requestAnimationFrame(animate);
-    render();
+        camera.position.x += positionDelta;
+    }
+    //W
+    else if ( keyCode == 119 )
+    {
+        camera.position.z -= positionDelta;
+    }
+    //S
+    else if ( keyCode == 115 )
+    {
+        camera.position.z += positionDelta;
+    }
+    //Q
+    else if ( keyCode == 113 )
+    {
+        camera.position.y += positionDelta;
+    }
+    //E
+    else if ( keyCode == 101 )
+    {
+        camera.position.y -= positionDelta;
+    }
+    //T
+    else if ( keyCode == 116 )
+    {
+        camera.rotation.x += rotationDelta;
+    }
+    //G
+    else if ( keyCode == 103 )
+    {
+        camera.rotation.x -= rotationDelta;
+    }
+    //F
+    else if ( keyCode == 102 )
+    {
+        camera.rotation.y += rotationDelta;
+    }
+    //H
+    else if ( keyCode == 104 )
+    {
+        camera.rotation.y -= rotationDelta;
+    }
+    console.log(camera.position);
+    console.log(camera.rotation);
 }
