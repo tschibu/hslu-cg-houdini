@@ -17,9 +17,25 @@ Optional soll es möglich sein, weitere Objekte in die Webapp einzubinden um jeg
 * **Zusammenführung**
     Für das Finale Objekt wurden 3 Stadt Komponenten und 1 Ground & Mountain Komponent zusammengeführt
     Die Stadt Objekte haben jeweils andere Parameter um verschiedene Städte zu erzeugen.
+
 ### Webapp mit Three.js
+Die Webapplikation ist eigentlich ein *.obj Viewer. Man kann mithilfe einer Konfiguration die
+unterstützten *.obj Files definieren. Auf der Webseite kann dann mit einem Dropdown das *.obj File
+gewählt werden. Es kann zusätlich die Bewegungsgeschwindikeit eingestellt werden. Die Kamera
+Attribute werden auch dargestellt.
+
+#### Bewegung
+| Position      	| Rotation               	|
+|---------------	|------------------------	|
+| W - Vorwärts  	| F - Nach Links drehen  	|
+| S - Rückwärts 	| H - Nach Rechts drehen 	|
+| A - Links     	| T - Nach Oben schauen  	|
+| D - Rechts    	| G - Nach Unten schauen 	|
+| Q - Hoch      	|                        	|
+| E - Runter    	|                        	|
 
 ## Tools
+
 ### Houdini
 Houdini ist ein Werkzeug um 3D Szenen zu erzeugen. Es kann für Film & TV, Games, Motion Graphics und auch VR
 genutzt werden. Extrem spanned sind vorallem die möglichkeiten welche durch die Nodes basierte verarbeitung
@@ -49,12 +65,21 @@ ein *.obj File gespeichert werden. Die *.obj Files sind im ordner ../hslu-cg-hou
 abgelegt und werden im File ../hslu-cg-houdini/webapp/config.json referenziert.
 
 ## Credits
+
 ### THREE.js
+
 * [Webseite THREE.js](https://threejs.org)
+
 ### THREE.js *.obj Loader
+
 * [*.obj Loader](https://threejs.org/docs/#examples/loaders/OBJLoader)
+
 ### Houdini
+
 * [Dokumentation SideFX](https://www.sidefx.com/tutorials/)
+
 ### Pandoc
+
 * PDF generierung von Markdown Files
+
     [Webseite](https://pandoc.org)
