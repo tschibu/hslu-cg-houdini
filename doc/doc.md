@@ -1,20 +1,20 @@
 # CG Projekt - R. Schwarzentruber, M. Nebroj, S. Ineichen
 ## Einleitung
 Ziel dieses Projekts ist es eine randomisierte Stadt mit Houdini zu generiern. Die generierte Stadt soll anschliessend
-in einem Browser gerendert werden und zudem soll eine Navigation innerhalb der Stadt möglich sein.
-Optional soll es möglich sein weitere Objekte in die Webapp einzubinden um jegliche *.obj Files anzeigen zu können
+in einem Browser gerendert werden und zudem soll eine Navigation durch die Stadt möglich sein.
+Optional soll es möglich sein, weitere Objekte in die Webapp einzubinden um jegliche *.obj Files anzeigen zu können.
 
 ## Umsetzung
 ### Stadt mit Houdini
-* Komponent Stadt
+* **Komponent Stadt**
     Es wurde ein Stadt Komponent erzeugt der verschiedene Parameter hat.
-    Dazu gehören die Grundfläche, Anzahl Häuser, Grösse und Konturen
+    Dazu gehören die Grundfläche, Anzahl Häuser, Grösse und Konturen.
 
-* Komponent Ground & Mountain
+* **Komponent Ground & Mountain**
     Der Ground & Mountain Komponent besteht aus einem Grid welches der Boden darstellt und einem Grid,
     welches die Berge darstellt. Beide Grids werden schlussendlich zu einem verschmolzen.
 
-* Zusammenführung
+* **Zusammenführung**
     Für das Finale Objekt wurden 3 Stadt Komponenten und 1 Ground & Mountain Komponent zusammengeführt
     Die Stadt Objekte haben jeweils andere Parameter um verschiedene Städte zu erzeugen.
 ### Webapp mit Three.js
