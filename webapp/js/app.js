@@ -34,6 +34,9 @@ var helperGrid = new THREE.GridHelper(size, divisions);
 createScene();
 
 //camera
+var cameraXmax = 550;
+var cameraYmax = 550;
+var cameraZmax = 550;
 camera.add(pointLight);
 camera.position.x = 0;
 camera.position.y = 18;
@@ -181,8 +184,11 @@ function moveCamera() {
 
     //pass velocity as an argument to translateZ and call it on camera.
     camera.translateX( velocityMove.x * delta );
+    camera.position.x = rangeCheck(camera.position.x, -cameraXmax, cameraXmax);
     camera.translateY( velocityMove.y * delta );
+    camera.position.y = rangeCheck(camera.position.y, 0, cameraYmax);
     camera.translateZ( velocityMove.z * delta );
+    camera.position.z = rangeCheck(camera.position.z, -cameraZmax, cameraZmax);
 
     rotInit = (3 / maxSliderValue) * rotationSpeed;
     rot = (2000 / maxSliderValue) * rotationSpeed;
@@ -311,4 +317,13 @@ function loadJson(path, callback) {
 
 function toFixed(number) {
     return Number((number).toFixed(2));
+}
+
+function rangeCheck(value, min, max) {
+    if(value < min) {
+        value = min;
+    } else if (value > max) {
+        value = max;
+    }
+    return value;
 }
