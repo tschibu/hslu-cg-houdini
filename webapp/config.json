@@ -1,8 +1,14 @@
 {
     "objs": [
         {
+            "name": "Generative City 2",
+            "creator": "R. Schwarzentruber, M. Nebroj, S. Ineichen @2018",
+            "license": "for comercial and non comercial use. just give the apropiate credits!",
+            "path": "/obj/generative_city_2/map.obj"
+        },
+        {
             "name": "Generative City 1",
-            "creator": "Schwarzentruber, Nebroj, Ineichen @2018",
+            "creator": "R. Schwarzentruber, M. Nebroj, S. Ineichen @2018",
             "license": "for comercial and non comercial use. just give the apropiate credits!",
             "path": "/obj/generative_city_1/map.obj"
         },
