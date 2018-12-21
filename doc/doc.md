@@ -4,7 +4,7 @@
 ## Einleitung
 Ziel dieses Projekts ist es eine randomisierte Stadt mit Houdini zu generiern. Die generierte Stadt soll anschliessend
 in einem Browser gerendert werden und zudem soll eine Navigation durch die Stadt möglich sein.
-Optional soll es möglich sein, weitere Objekte in die Webapp einzubinden um jegliche *.obj Files anzeigen zu können.
+Optional soll es möglich sein, weitere Objekte in die Webapp einzubinden um jegliche `*.obj` Files anzeigen zu können.
 
 ![](title.png)
 
@@ -23,8 +23,8 @@ Optional soll es möglich sein, weitere Objekte in die Webapp einzubinden um jeg
     Die Stadt Objekte haben jeweils andere Parameter um verschiedene Städte zu erzeugen.
 
 ### Webapp mit Three.js
-Die Webapplikation ist eigentlich ein *.obj Viewer. Man kann mithilfe einer Konfiguration die
-unterstützten *.obj Files definieren. Auf der Webseite kann dann mit einem Dropdown das *.obj File
+Die Webapplikation ist eigentlich ein `*.obj` Viewer. Man kann mithilfe einer Konfiguration die
+unterstützten `*.obj` Files definieren. Auf der Webseite kann dann mit einem Dropdown das `*.obj` File
 gewählt werden. Es kann zusätlich die Bewegungsgeschwindikeit eingestellt werden. Die Kamera
 Attribute werden auch dargestellt.
 
@@ -58,17 +58,17 @@ Wir verwendeten einen mini Python Webserver um lokal zu entwickeln, um nicht
 zwingend auf Webstorm angewiesen zu werden.
 
 ## Webapp Starten
-1. ../hslu-cg-houdini/webapp mit Webstorm öffnen und index.html aufmachen
+1. `../hslu-cg-houdini/webapp` mit Webstorm öffnen und index.html aufmachen
     oder
-2. ../hslu-cg-houdini/webapp/localwebserver.py mit Python starten und http://localhost:8080
+2. `../hslu-cg-houdini/webapp/localwebserver.py` mit Python starten und http://localhost:8080
     in einem Webbrowser öffnen
 
 ## Houdini Projekt bearbeiten
-Das Houdini Projekt befindet sich im Ordner ../hslu-cg-houdini/houdini.
+Das Houdini Projekt befindet sich im Ordner `../hslu-cg-houdini/houdini`.
 Wenn die Webapp angepasst werden soll muss in Houdini *.obj Export gemacht werden.
 Dafür wird der gewünschte Knoten selektiert und mit einem Rechts-Klick kann dann
-ein *.obj File gespeichert werden. Die *.obj Files sind im ordner ../hslu-cg-houdini/webapp/obj
-abgelegt und werden im File ../hslu-cg-houdini/webapp/config.json referenziert.
+ein `*.obj` File gespeichert werden. Die `*.obj` Files sind im ordner `../hslu-cg-houdini/webapp/obj`
+abgelegt und werden im File `../hslu-cg-houdini/webapp/config.json` referenziert.
 
 ## Credits
 
