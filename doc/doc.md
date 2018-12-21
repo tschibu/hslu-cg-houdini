@@ -1,8 +1,12 @@
-# CG Projekt - R. Schwarzentruber, M. Nebroj, S. Ineichen
+# CG Projekt
+**R. Schwarzentruber, M. Nebroj, S. Ineichen**
+
 ## Einleitung
 Ziel dieses Projekts ist es eine randomisierte Stadt mit Houdini zu generiern. Die generierte Stadt soll anschliessend
 in einem Browser gerendert werden und zudem soll eine Navigation durch die Stadt möglich sein.
 Optional soll es möglich sein, weitere Objekte in die Webapp einzubinden um jegliche *.obj Files anzeigen zu können.
+
+![](title.png)
 
 ## Umsetzung
 ### Stadt mit Houdini
@@ -33,6 +37,8 @@ Attribute werden auch dargestellt.
 | D - Rechts    	| G - Nach Unten schauen 	|
 | Q - Hoch      	|                        	|
 | E - Runter    	|                        	|
+
+\pagebreak
 
 ## Tools
 
