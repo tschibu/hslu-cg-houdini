@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <title>CG Project - Team Schwarzentruber, Nebroj, Ineichen</title>
     <script type="text/javascript" src="js/three.js"></script>
+    <script type="text/javascript" src="js/three-utils.js"></script>
     <script type="text/javascript" src="js/objloader.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
 </head>
 
 <body>
@@ -19,6 +21,27 @@
             <li class="objselection" id="objselection">
             </li>
             <li class="data" id="data">
+                <ul class="dataList">
+                    <li style="margin: 0.5em 0em 0em 1em;">
+                        <h6>Move Speed:</h6>
+                        <input type="range" min="0" max="15" value="4" class="slider" id="moveSpeed">
+                        <h6>Rotation Speed:</h6>
+                        <input type="range" min="0" max="15" value="5" class="slider" id="rotationSpeed">
+                    </li>
+                    <li style="margin: 1em 0em 0em 1em;">
+                        <h5>Camera:</h5>
+                    </li>
+                    <li style="margin: 1em 0em 0em 0.2em;">
+                        <h6 id="posX"></h6>
+                        <h6 id="posY"></h6>
+                        <h6 id="posZ"></h6>
+                    </li>
+                    <li style="margin: 1em 0em 0em 0.2em;">
+                        <h6 id="rotX"></h6>
+                        <h6 id="rotY"></h6>
+                        <h6 id="rotZ"></h6>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>
